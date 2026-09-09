@@ -68,20 +68,60 @@ ul{ list-style:none; }
 .site-header{
   display:flex; align-items:center; justify-content:space-between; gap: 20px;
   padding: 16px 20px; position: sticky; top:0; z-index: 50;
-  background: rgba(8,9,11,0.85); backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
+.site-header::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8,9,11,0.85);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
 .header-left{ display:flex; align-items:center; gap: 28px; min-width:0; }
 .logo{ font-family: var(--font-display); font-weight:700; letter-spacing:0.01em; font-size:1.15rem; flex-shrink:0; }
 .logo span{ color: var(--blue-light); }
 
+.header-right{ display:flex; align-items:center; gap:12px; flex-shrink:0; }
+
+/* hamburger button — hidden on desktop by default */
+.menu-btn{
+  display:none;
+  flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:6px;
+}
+.menu-btn span{ width:22px; height:2px; background: var(--text); display:block; }
+
+/* nav links — normal row on desktop */
 .nav-links{
   display:flex; gap: 20px; overflow-x:auto; scrollbar-width:none;
   font-size: 0.85rem; font-weight:500; color: var(--text-muted);
+  flex: 1; min-width: 0;
 }
 .nav-links::-webkit-scrollbar{ display:none; }
 .nav-links a{ white-space:nowrap; transition: color .15s ease; }
 .nav-links a:hover{ color: var(--text); }
+
+/* mobile: below 860px, hide the row nav and show the hamburger instead */
+@media (max-width: 860px){
+  .nav-links{
+    display:none;
+    position: fixed; top: 68px; right:0;
+    width: 65%;
+    max-width: 280px;
+    max-height: 50vh;
+    overflow-y: hidden;
+    flex-direction: column; gap: 18px;
+    justify-content: center;
+    background: var(--bg-elev); 
+    border-left: 1px solid var(--border);
+    box-shadow: -12px 12px 24px rgba(0,0,0,0.5);
+    padding: 24px;
+    font-size: 1.05rem; z-index: 49; overflow-x: visible;
+  }
+  .nav-links.open{ display:flex; }
+  .menu-btn{ display:flex; }
+}
 
 .hotline{
   display:flex; align-items:center; gap:8px;
