@@ -28,7 +28,6 @@ export default function Hero() {
       </div>
 
       <div className="hero-meta">
-        <span>⭐ 5.0 on Google · 28 reviews</span>
         <span>🕐 24 hours · every day</span>
         <span>🚗 Self drive · or with driver</span>
       </div>

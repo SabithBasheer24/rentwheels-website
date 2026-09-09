@@ -15,7 +15,7 @@ export default function Contact() {
       </p>
       <p>
         <a href="https://maps.app.goo.gl/iBN8Dhef2Lh6LxPA6" target="_blank" rel="noreferrer">
-          ⭐ 5.0 across 28 reviews on Google
+          ⭐ see our reviews
         </a>
       </p>
 
@@ -28,8 +28,7 @@ export default function Contact() {
         </a>
       </div>
 
-      <p className="footer-note">Replace the map, phone number and address with your own before you publish.</p>
-      <p className="copyright">© {new Date().getFullYear()} {BUSINESS.name}. Built with React.</p>
+      <p className="copyright">© {new Date().getFullYear()} {BUSINESS.name}.</p>
     </footer>
   );
 }

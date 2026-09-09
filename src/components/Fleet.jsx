@@ -6,7 +6,7 @@ function VehicleCard({ vehicle }) {
     <div className="vehicle-card">
       <div className="vehicle-photo">
         <span className="vehicle-badge">{vehicle.badge}</span>
-        {vehicle.icon}
+        <img src={vehicle.image} alt={vehicle.name} />
       </div>
       <div className="vehicle-body">
         <h3>{vehicle.name}</h3>
