@@ -9,8 +9,11 @@ import FAQ from "./components/FAQ";
 import Contact from "./components/Contact";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import ScrollToTop from "./components/ScrollToTop";
+import { useState } from "react";
 
 export default function App() {
+  const [presetVehicle, setPresetVehicle] = useState(null);
+
   return (
     <>
       <Header />
@@ -19,9 +22,9 @@ export default function App() {
         <Hero />
         <StatusStrip />
         <Ticker />
-        <Fleet />
+        <Fleet onSelectVehicle={setPresetVehicle}/>
         <Services />
-        <Booking />
+        <Booking presetVehicle={presetVehicle} />
         <FAQ />
         <Contact />
       </main>

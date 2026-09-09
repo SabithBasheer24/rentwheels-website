@@ -1,7 +1,6 @@
 import { VEHICLES } from "../data";
-import { buildWhatsAppLink, quickVehicleMessage } from "../whatsapp";
 
-function VehicleCard({ vehicle }) {
+function VehicleCard({ vehicle, onSelectVehicle }) {
   return (
     <div className="vehicle-card">
       <div className="vehicle-photo">
@@ -17,19 +16,18 @@ function VehicleCard({ vehicle }) {
           ))}
         </div>
         <a
-          className="btn btn-whatsapp"
-          href={buildWhatsAppLink(quickVehicleMessage(vehicle))}
-          target="_blank"
-          rel="noreferrer"
+          className="btn btn-primary btn-sm"
+          href="#book"
+          onClick={() => onSelectVehicle(vehicle.name)}
         >
-          Check this vehicle →
+          Book now →
         </a>
       </div>
     </div>
   );
 }
 
-export default function Fleet() {
+export default function Fleet({ onSelectVehicle }) {
   return (
     <section id="fleet" className="fleet">
       <p className="eyebrow">
@@ -45,7 +43,7 @@ export default function Fleet() {
 
       <div className="fleet-scroll">
         {VEHICLES.map((v) => (
-          <VehicleCard key={v.id} vehicle={v} />
+          <VehicleCard key={v.id} vehicle={v} onSelectVehicle={onSelectVehicle} />
         ))}
       </div>
       <p className="swipe-hint">→ swipe for more</p>

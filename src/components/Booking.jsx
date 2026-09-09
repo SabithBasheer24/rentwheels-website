@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { VEHICLES, BUSINESS } from "../data";
 import { buildWhatsAppLink } from "../whatsapp";
 
 const TOTAL_STEPS = 4;
 
-export default function Booking() {
+export default function Booking({ presetVehicle }) {
   const [step, setStep] = useState(1);
   const [form, setForm] = useState({
     vehicle: "",
@@ -16,6 +16,12 @@ export default function Booking() {
     phone: "",
     notes: "",
   });
+
+  useEffect(() => {
+    if (presetVehicle) {
+      setForm((f) => ({ ...f, vehicle: presetVehicle }));
+    }
+  }, [presetVehicle]);
 
   function update(field, value) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -141,13 +147,12 @@ export default function Booking() {
               <input type="date" value={form.returnDate} onChange={(e) => update("returnDate", e.target.value)} />
             </label>
             <label className="field">Pickup location
-              <select value={form.pickupLocation} onChange={(e) => update("pickupLocation", e.target.value)}>
-                <option value="">Choose one</option>
-                <option>Kurunegala town</option>
-                <option>Airport (Katunayake)</option>
-                <option>Bus stand</option>
-                <option>Other — I'll specify in notes</option>
-              </select>
+              <input
+                type="text"
+                placeholder="e.g. Kurunegala town, airport, bus stand..."
+                value={form.pickupLocation}
+                onChange={(e) => update("pickupLocation", e.target.value)}
+              />
             </label>
           </div>
         )}

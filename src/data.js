@@ -5,14 +5,14 @@
 export const BUSINESS = {
   name: "RentWheels",
   // country code + number, no + sign, no spaces
-  whatsappNumber: "94779297273",
-  displayPhone: "077 929 7273",
+  whatsappNumber: "94716297273",
+  displayPhone: "071 629 7273",
 };
 
 export const VEHICLES = [
   {
-    id: "suzuki-every",
-    name: "Suzuki Every",
+    id: "suzuki-every-black",
+    name: "Suzuki Every (black)",
     badge: "Van",
     image: "/images/vehicles/suzuki-every.jpeg",
     tagline: "The workhorse. Family trips, group runs, moving goods.",
@@ -75,8 +75,8 @@ export const VEHICLES = [
     specs: ["5 seats", "Automatic", "Air conditioning"],
   },
   {
-    id: "suszuki-every",
-    name: "Suzuki Every",
+    id: "suzuki-every-white",
+    name: "Suzuki Every (white)",
     badge: "Van",
     image: "/images/vehicles/suzuki-every-joinTurbo.jpeg",
     tagline: "The workhorse. Family trips, group runs, moving goods.",
