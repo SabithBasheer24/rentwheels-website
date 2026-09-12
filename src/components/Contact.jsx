@@ -1,6 +1,6 @@
 import { BUSINESS } from "../data";
 import { buildWhatsAppLink, defaultMessage } from "../whatsapp";
-import Logo from "./logo";
+import Logo from "./Logo";
 export default function Contact() {
   return (
     <footer id="contact" className="contact">

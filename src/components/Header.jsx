@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BUSINESS } from "../data";
-import Logo from "./logo";
+import Logo from "./Logo";
 const LINKS = [
   ["#home", "Home"],
   ["#fleet", "Fleet"],
