@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BUSINESS } from "../data";
-
+import Logo from "./logo";
 const LINKS = [
   ["#home", "Home"],
   ["#fleet", "Fleet"],
@@ -16,8 +16,8 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="header-left">
-        <a href="#home" className="logo">
-          RENT<span>WHEELS</span>
+        <a href="#home" >
+         <Logo size="sm" />
         </a>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>

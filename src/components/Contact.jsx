@@ -1,10 +1,11 @@
 import { BUSINESS } from "../data";
 import { buildWhatsAppLink, defaultMessage } from "../whatsapp";
-
+import Logo from "./logo";
 export default function Contact() {
   return (
     <footer id="contact" className="contact">
       <p className="eyebrow"><span className="bar" /> FIND US</p>
+       <Logo size="footer" animated={false} />
       <h2 className="section-title">GET IN <span className="accent">TOUCH</span></h2>
       <p>Open 24 hours · 7 days a week</p>
 
