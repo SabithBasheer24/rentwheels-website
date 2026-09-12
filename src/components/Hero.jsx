@@ -14,7 +14,7 @@ export default function Hero() {
         <span className="accent">TODAY.</span>
       </h1>
       <p className="sub">
-        Cars and vans for hire in Kurunegala — drive it yourself or take a driver. Airport runs,
+        Cars and vans for hire in Kurunegala. Drive it yourself or take a driver. Airport runs,
         weddings, tours, or a vehicle for the whole month.
       </p>
 
