@@ -29,6 +29,9 @@ export default function Contact() {
       </div>
 
       <p className="copyright">© {new Date().getFullYear()} {BUSINESS.name}.</p>
+      <a className="copyright" href="https://www.linkedin.com/in/sabith-basheer-55174b338" target="_blank" rel="noreferrer">
+        Designed & Developed by Sabith Basheer
+      </a>
     </footer>
   );
 }
